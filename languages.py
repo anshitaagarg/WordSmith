@@ -12,3 +12,17 @@ LANGUAGES = {
     "Russian": "ru",
     "Arabic": "ar"
 }
+
+LANGUAGE_NAMES = {
+    "en": "English",
+    "hi": "Hindi",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
+    "it": "Italian",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "zh-cn": "Chinese",
+    "ru": "Russian",
+    "ar": "Arabic"
+}

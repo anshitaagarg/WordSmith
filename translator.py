@@ -1,3 +1,4 @@
+from langdetect import detect
 from deep_translator import GoogleTranslator
 
 def translate_text(text, source_lang, target_lang):
@@ -11,3 +12,9 @@ def translate_text(text, source_lang, target_lang):
 
     except Exception as e:
         return f"Error: {str(e)}"
+
+def detect_language(text):
+    try:
+        return detect(text)
+    except:
+        return None
