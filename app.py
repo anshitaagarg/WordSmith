@@ -1,12 +1,14 @@
-import streamlit as st
+from email.policy import default
 
+import streamlit as st
+from speech import text_to_speech
 from translator import translate_text, detect_language
 from languages import LANGUAGES, LANGUAGE_NAMES
 from history_manager import save_translation, load_history
 
 st.set_page_config(
     page_title="WordSmith",
-    page_icon="🌍",
+    page_icon="⚒️",
     layout="wide"
 )
 
@@ -33,7 +35,7 @@ h1 {
 st.markdown("""
 <div style="text-align:center; padding:10px 0;">
     <h1 style="margin-bottom:0;">
-        🌍 WordSmith
+        ⚒️ WordSmith
     </h1>
     <p style="
         font-size:22px;
@@ -45,24 +47,45 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
+if "source_lang" not in st.session_state:
+    st.session_state.source_lang = "Auto Detect"
+
+if "target_lang" not in st.session_state:
+    st.session_state.target_lang = "English"
+    
+col1, col_swap, col2 = st.columns([5, 1.2, 5])
 
 with col1:
     source_language = st.selectbox(
         "Source Language",
-        list(LANGUAGES.keys())
+        list(LANGUAGES.keys()),
+        index=list(LANGUAGES.keys()).index(st.session_state.source_lang)
     )
 
+with col_swap:
+    st.write("")
+    st.write("")
+    if st.button("⇄"):
+        temp = st.session_state.source_lang
+        st.session_state.source_lang = (
+            st.session_state.target_lang
+        )
+        st.session_state.target_lang = temp
+        st.rerun()
+        
 with col2:
     target_language = st.selectbox(
         "Target Language",
         list(LANGUAGES.keys()),
-        index=1
+        index=list(LANGUAGES.keys()).index(st.session_state.target_lang)
     )
+
+st.session_state.source_lang = source_language
+st.session_state.target_lang = target_language
 
 input_text = st.text_area(
     "Enter text to translate:",
-    height=100
+    height=100,
 )
 
 if input_text.strip() and len(input_text.split()) > 3:
@@ -86,43 +109,66 @@ with col2:
     st.metric("Characters", char_count)
 
 if st.button("Translate"):
-    
+
     if input_text.strip():
-        detected_code = detect_language(input_text)
-        if detected_code:
-            detected_name = LANGUAGE_NAMES.get(
-                detected_code.lower(),
-                detected_code.upper()
-            )
 
         with st.spinner("Translating..."):
+
             translated_text = translate_text(
                 input_text,
                 LANGUAGES[source_language],
                 LANGUAGES[target_language]
             )
-        
-        st.success("Translation Complete!")
+
+        target_code = LANGUAGES[target_language].lower()
+
+        st.session_state["translated_text"] = translated_text
+        st.session_state["target_code"] = target_code
+
         save_translation(
             source_language,
             target_language,
             input_text,
             translated_text
         )
-        
-        st.text_area(
-            "Translated Text",
-            translated_text,
-            height=100
-        )
 
-        st.download_button(
-            label="📥 Download Translation",
-            data=translated_text,
-            file_name="translation.txt",
-            mime="text/plain"
-        )
+        st.success("Translation Complete!")
 
+
+# --------------------------
+# DISPLAY SAVED TRANSLATION
+# --------------------------
+
+if "translated_text" in st.session_state:
+
+    st.text_area(
+        "Translated Text",
+        st.session_state["translated_text"],
+        height=100
+    )
+    st.code(
+        st.session_state["translated_text"],
+        language=None
+    )
+    if st.button("🔊"):
+
+        try:
+
+            audio_file = text_to_speech(
+                st.session_state["translated_text"],        
+                st.session_state["target_code"]
+            )
+
+            st.audio(
+                audio_file,
+                format="audio/mp3"
+            )
+
+        except Exception as e:
+            st.warning(
+                f"Audio unavailable: {e}"
+            )
+    
 st.divider()
 st.subheader("📜 Translation History")
 

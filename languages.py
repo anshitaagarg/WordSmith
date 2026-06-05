@@ -1,16 +1,54 @@
 LANGUAGES = {
     "Auto Detect": "auto",
+
     "English": "en",
     "Hindi": "hi",
     "French": "fr",
     "German": "de",
     "Spanish": "es",
     "Italian": "it",
+    "Portuguese": "pt",
+    "Dutch": "nl",
+    "Russian": "ru",
+    "Polish": "pl",
+    "Turkish": "tr",
+    "Greek": "el",
+    "Swedish": "sv",
+    "Norwegian": "no",
+    "Danish": "da",
+    "Finnish": "fi",
+
+    "Arabic": "ar",
+    "Hebrew": "iw",
+    "Persian": "fa",
+    "Urdu": "ur",
+
+    "Chinese": "zh-CN",
     "Japanese": "ja",
     "Korean": "ko",
-    "Chinese": "zh-CN",
-    "Russian": "ru",
-    "Arabic": "ar"
+    "Thai": "th",
+    "Vietnamese": "vi",
+    "Indonesian": "id",
+    "Malay": "ms",
+
+    "Bengali": "bn",
+    "Tamil": "ta",
+    "Telugu": "te",
+    "Punjabi": "pa",
+    "Gujarati": "gu",
+    "Marathi": "mr",
+    "Kannada": "kn",
+    "Malayalam": "ml",
+
+    "Czech": "cs",
+    "Hungarian": "hu",
+    "Romanian": "ro",
+    "Slovak": "sk",
+    "Ukrainian": "uk",
+
+    "Afrikaans": "af",
+    "Swahili": "sw",
+    "Filipino": "tl"
 }
 
 LANGUAGE_NAMES = {
@@ -24,5 +62,41 @@ LANGUAGE_NAMES = {
     "ko": "Korean",
     "zh-cn": "Chinese",
     "ru": "Russian",
-    "ar": "Arabic"
+    "ar": "Arabic",
+    "pt": "Portuguese",
+    "nl": "Dutch",
+    "tr": "Turkish",
+    "pl": "Polish",
+    "el": "Greek",
+    "sv": "Swedish",
+    "no": "Norwegian",
+    "da": "Danish",
+    "fi": "Finnish",
+    
+    "iw": "Hebrew",
+    "fa": "Persian",
+    "ur": "Urdu",
+    "th": "Thai",
+    "vi": "Vietnamese",
+    "id": "Indonesian",
+    "ms": "Malay",
+    
+    "bn": "Bengali",
+    "ta": "Tamil",
+    "te": "Telugu",
+    "pa": "Punjabi",
+    "gu": "Gujarati",
+    "mr": "Marathi",
+    "kn": "Kannada",
+    "ml": "Malayalam",
+    
+    "cs": "Czech",
+    "hu": "Hungarian",
+    "ro": "Romanian",
+    "sk": "Slovak",
+    "uk": "Ukrainian",
+    
+    "af": "Afrikaans",
+    "sw": "Swahili",
+    "tl": "Filipino"
 }
