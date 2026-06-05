@@ -100,13 +100,7 @@ if input_text.strip() and len(input_text.split()) > 3:
 word_count = len(input_text.split())
 char_count = len(input_text)
 
-col1, col2 = st.columns(2)
-
-with col1:
-    st.metric("Words", word_count)
-
-with col2:
-    st.metric("Characters", char_count)
+st.caption(f"Words: {word_count} | Characters: {char_count}")
 
 if st.button("Translate"):
 
@@ -141,11 +135,7 @@ if st.button("Translate"):
 
 if "translated_text" in st.session_state:
 
-    st.text_area(
-        "Translated Text",
-        st.session_state["translated_text"],
-        height=100
-    )
+    st.markdown("### Translated Text")
     st.code(
         st.session_state["translated_text"],
         language=None
@@ -182,3 +172,9 @@ if not history_df.empty:
 
 else:
     st.info("No translations yet.")
+    
+st.markdown("---")
+
+st.caption(
+    "⚒️ WordSmith | By anshitaagarg"
+)

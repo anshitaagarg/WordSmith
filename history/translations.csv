@@ -88,3 +88,12 @@ Timestamp,Source,Target,Original Text,Translated Text
 2026-06-05 16:47:57.934630,English,Hindi,"Hola shivika, ¿saldrás a tomar una copa esta noche?","होला शिविका, ¿सल्ड्रास ए तोमर उना कोपा एस्टा नोचे?"
 2026-06-05 16:48:13.743039,English,Bengali,"Hola shivika, ¿saldrás a tomar una copa esta noche?","হোলা শিবিকা, ¿সালড্রাস একটি তোমার উনা কোপা এস্তা নচে?"
 2026-06-05 16:48:37.755579,Spanish,Bengali,"Hola shivika, ¿saldrás a tomar una copa esta noche?","হাই শিবিকা, তুমি কি আজ রাতে ড্রিঙ্কের জন্য বাইরে যাচ্ছ?"
+2026-06-05 17:04:33.858089,Auto Detect,Hindi,welcome back shivika darling,welcome back shivika darling
+2026-06-05 17:04:45.823379,Auto Detect,Hindi,welcome back shivika darling,welcome back shivika darling
+2026-06-05 17:04:59.043055,Auto Detect,Spanish,welcome back shivika darling,bienvenido de nuevo shivika cariño
+2026-06-05 17:05:10.477694,Auto Detect,Hindi,welcome back shivika darling,welcome back shivika darling
+2026-06-05 17:05:29.760803,Auto Detect,Bengali,welcome back shivika darling,শিবিকা প্রিয়তমাকে স্বাগত জানাই
+2026-06-05 17:05:47.118472,Auto Detect,Bengali,"welcome back shivika darling, do you want water","স্বাগত জানাই শিবিকা ডার্লিং, তুমি কি জল চাও"
+2026-06-05 17:06:03.906810,Auto Detect,Hindi,"welcome back shivika darling, do you want water","शिविका डार्लिंग, आपका फिर से स्वागत है, क्या आपको पानी चाहिए"
+2026-06-05 17:25:35.546740,Auto Detect,Hindi,"welcome back shivika darling, do you want water","शिविका डार्लिंग, आपका फिर से स्वागत है, क्या आपको पानी चाहिए"
+2026-06-05 17:27:14.625051,Auto Detect,Hindi,"welcome back shivika darling, do you want water or something to eat?","शिविका डार्लिंग, आपका फिर से स्वागत है, क्या आपको पानी या कुछ और खाना चाहिए?"
