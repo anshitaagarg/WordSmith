@@ -3,6 +3,15 @@
 WordSmith is an AI-powered multilingual translation application built using Streamlit, Deep Translator, and gTTS.
 It enables users to translate text between multiple languages, detect the input language automatically, listen to translated text using text-to-speech, and seamlessly switch between source and target languages through an intuitive user interface.
 
+## 📸 Screenshots
+
+### Home Screen
+
+![Home Screen](assets/home.png)
+
+### Text-to-Speech Feature
+
+![Text To Speech](assets/tts.png)
 ## 🚀 Live Demo
 
 https://wordsmith-ai-translator.streamlit.app/
