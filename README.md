@@ -1,8 +1,22 @@
-# 🌍 WordSmith
+#  ⚒️WordSmith
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![gTTS](https://img.shields.io/badge/gTTS-TTS-orange)
+![Deep Translator](https://img.shields.io/badge/Deep_Translator-NLP-green)
+![AI/ML](https://img.shields.io/badge/AI%2FML-Project-purple)
 
 WordSmith is an AI-powered multilingual translation application built using Streamlit, Deep Translator, and gTTS.
 It enables users to translate text between multiple languages, detect the input language automatically, listen to translated text using text-to-speech, and seamlessly switch between source and target languages through an intuitive user interface.
 
+## 🚀 Live Demo
+
+https://wordsmith-ai-translator.streamlit.app/
+
+## 📂 GitHub Repository
+
+https://github.com/anshitaagarg/WordSmith
+
+---
 ## 📸 Screenshots
 
 ### Home Screen
@@ -12,13 +26,6 @@ It enables users to translate text between multiple languages, detect the input 
 ### Text-to-Speech Feature
 
 ![Text To Speech](assets/tts.png)
-## 🚀 Live Demo
-
-https://wordsmith-ai-translator.streamlit.app/
-
-## 📂 GitHub Repository
-
-https://github.com/anshitaagarg/WordSmith
 
 ---
 
